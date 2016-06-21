@@ -18,7 +18,8 @@
 		<extension name="mcc" />
 		<extension name="platformhmc" />
 		<extension name="cuppy" />
-										
+		<extension name="cuppytrail" />
+		<extension name="cuppytrailhmc" />
 		
 				
 	</extensions>

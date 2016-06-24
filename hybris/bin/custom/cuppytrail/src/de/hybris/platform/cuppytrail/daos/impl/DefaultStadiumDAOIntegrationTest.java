@@ -1,9 +1,12 @@
 package de.hybris.platform.cuppytrail.daos.impl;
 
+import de.hybris.platform.core.Registry;
 import de.hybris.platform.cuppytrail.daos.StadiumDAO;
 import de.hybris.platform.cuppytrail.jalo.Stadium;
 import de.hybris.platform.servicelayer.ServicelayerTransactionalTest;
 import de.hybris.platform.servicelayer.model.ModelService;
+import de.hybris.platform.cuppytrail.model.StadiumModel;
+
 import org.junit.Test;
 import org.springframework.stereotype.Component;
 
@@ -20,8 +23,6 @@ import static org.junit.Assert.assertTrue;
 
 @Component(value = "stadiumDAO")
 public class DefaultStadiumDAOIntegrationTest extends ServicelayerTransactionalTest {
-
-
     @Resource
     private StadiumDAO stadiumDAO;
 
@@ -33,10 +34,10 @@ public class DefaultStadiumDAOIntegrationTest extends ServicelayerTransactionalT
 
     @Test
     public void stadiumDAOTest() {
-       /* List<Stadium> stadiumByCode = stadiumDAO.findStadiumsByCode(STADIUM_NAME);
+       /* List<StadiumModel> stadiumByCode = stadiumDAO.findStadiumsByCode(STADIUM_NAME);
         assertTrue("No hay estadios para devolver", stadiumByCode.isEmpty());
 
-        List<Stadium> allStadiums = stadiumDAO.findStadiums();
+        List<StadiumModel> allStadiums = stadiumDAO.findStadiums();
         final int size = allStadiums.size();
 
         final Stadium stadiumModel = new Stadium();
@@ -53,6 +54,7 @@ public class DefaultStadiumDAOIntegrationTest extends ServicelayerTransactionalT
         assertEquals("Retrieved Stadium's name attribute incorrect",
                         STADIUM_NAME, stadiumByCode.get(0).getCode());
         assertEquals("Retrieved Stadium's capacity attribute incorrect",
+
                         STADIUM_CAPACITY, stadiumByCode.get(0).getCapacity());*/
 
         assertEquals("Test ",  STADIUM_NAME, STADIUM_NAME);

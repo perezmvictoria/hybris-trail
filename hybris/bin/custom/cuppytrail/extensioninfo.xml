@@ -26,7 +26,7 @@
       
 
       <coremodule generated="true" manager="de.hybris.platform.cuppytrail.jalo.CuppytrailManager"
-                  packageroot=" de.hybris.platform.cuppytrail"/>
+                  packageroot="de.hybris.platform.cuppytrail"/>
 
       <!--<webmodule jspcompile="false" webroot="/cuppytrail"/>-->
 

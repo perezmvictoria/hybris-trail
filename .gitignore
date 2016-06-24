@@ -88,3 +88,4 @@ pom.xml
 /packed-refs
 /refs/heads/gh-pages
 /refs/remotes/origin/HEAD
+/hybris/bin/custom/cuppytrail/classes/de/hybris/platform/cuppytrail/daos/impl/DefaultStadiumDAO.class

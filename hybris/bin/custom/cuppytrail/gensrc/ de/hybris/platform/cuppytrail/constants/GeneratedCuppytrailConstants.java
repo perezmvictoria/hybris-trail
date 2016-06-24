@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at Jun 21, 2016 5:01:13 PM                     ---
+ * --- Generated at Jun 24, 2016 2:31:17 PM                     ---
  * ----------------------------------------------------------------
  */
 package  de.hybris.platform.cuppytrail.constants;

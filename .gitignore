@@ -29,6 +29,7 @@ pom.xml
 /hybris/bin/ext-supportability/*  
 /hybris/bin/custom/platform/*
 /hybris/bin/custom/cuppy/*
+/hybris/bin/custom/cuppytrail/jalo/*
 /hybris/config/.classpath
 /hybris/config/.project
 /hybris/config/customize/dummy.txt

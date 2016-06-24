@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at Jun 24, 2016 2:31:17 PM                     ---
+ * --- Generated at Jun 24, 2016 3:02:22 PM                     ---
  * ----------------------------------------------------------------
  *  
  * [y] hybris Platform
@@ -64,7 +64,7 @@ public abstract class GeneratedCuppytrailManager extends Extension
 	{
 		try
 		{
-			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType(  CuppytrailConstants.TC.STADIUM );
+			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( CuppytrailConstants.TC.STADIUM );
 			return (Stadium)type.newInstance( ctx, attributeValues );
 		}
 		catch( JaloGenericCreationException e)
@@ -89,7 +89,7 @@ public abstract class GeneratedCuppytrailManager extends Extension
 	@Override
 	public String getName()
 	{
-		return  CuppytrailConstants.EXTENSIONNAME;
+		return CuppytrailConstants.EXTENSIONNAME;
 	}
 	
 	/**
@@ -98,7 +98,7 @@ public abstract class GeneratedCuppytrailManager extends Extension
 	 */
 	public Stadium getStadium(final SessionContext ctx, final Match item)
 	{
-		return (Stadium)item.getProperty( ctx,  CuppytrailConstants.Attributes.Match.STADIUM);
+		return (Stadium)item.getProperty( ctx, CuppytrailConstants.Attributes.Match.STADIUM);
 	}
 	
 	/**
@@ -116,7 +116,7 @@ public abstract class GeneratedCuppytrailManager extends Extension
 	 */
 	public void setStadium(final SessionContext ctx, final Match item, final Stadium value)
 	{
-		item.setProperty(ctx,  CuppytrailConstants.Attributes.Match.STADIUM,value);
+		item.setProperty(ctx, CuppytrailConstants.Attributes.Match.STADIUM,value);
 	}
 	
 	/**

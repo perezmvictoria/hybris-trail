@@ -89,3 +89,5 @@ pom.xml
 /refs/heads/gh-pages
 /refs/remotes/origin/HEAD
 /hybris/bin/custom/cuppytrail/classes/de/hybris/platform/cuppytrail/daos/impl/DefaultStadiumDAO.class
+/hybris/bin/custom/cuppytrail/gensrc/de/hybris/platform/cuppytrail/constants/GeneratedCuppytrailConstants.java
+/hybris/bin/custom/cuppytrail/src/de/hybris/platform/cuppytrail/constants/CuppytrailConstants.java

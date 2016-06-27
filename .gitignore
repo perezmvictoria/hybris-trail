@@ -80,9 +80,12 @@ pom.xml
 /refs/*
 /hybris/bin/custom/cuppytrailhmc/gensrc/de/hybris/platform/cuppytrail/jalo/*
 /hybris/bin/custom/cuppytrailhmc/gensrc/de/hybris/platform/cuppytrailhmc/jalo/*
-/hybris/bin/custom/cuppytrail/classes/de/hybris/platform/cuppytrail/daos/impl/DefaultStadiumDAO.class
-/hybris/bin/custom/cuppytrail/gensrc/de/hybris/platform/cuppytrail/constants/GeneratedCuppytrailConstants.java
+/hybris/bin/custom/cuppytrail/classes/*
+/hybris/bin/custom/cuppytrailhmc/classes/*
+/hybris/bin/custom/cuppytrail/gensrc/*
+/hybris/bin/custom/cuppytrailhmc/gensrc/*
 /hybris/bin/custom/cuppytrail/src/de/hybris/platform/cuppytrail/constants/CuppytrailConstants.java
-/hybris/bin/custom/cuppytrail/eclipsebin/notused/de/hybris/platform/cuppytrail/StadiumService.class
-/hybris/bin/custom/cuppytrail/eclipsebin/notused/de/hybris/platform/cuppytrail/daos/impl/DefaultStadiumServiceIntegrationTest.class
-/hybris/bin/custom/cuppytrail/eclipsebin/notused/de/hybris/platform/cuppytrail/impl/DefaultStadiumService.class
+/hybris/bin/custom/cuppytrail/eclipsebin/*
+/hybris/bin/custom/cuppytrailhmc/eclipsebin/*
+/hybris/bin/custom/cuppytrailhmc/hmc/bin*
+/hybris/bin/custom/cuppytrail/hmc/bin*

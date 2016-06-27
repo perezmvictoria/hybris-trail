@@ -88,4 +88,5 @@ pom.xml
 /hybris/bin/custom/cuppytrail/eclipsebin/*
 /hybris/bin/custom/cuppytrailhmc/eclipsebin/*
 /hybris/bin/custom/cuppytrailhmc/hmc/bin*
-/hybris/bin/custom/cuppytrail/hmc/bin*
+/hybris/bin/custom/cuppytrailgit /hmc/bin*
+

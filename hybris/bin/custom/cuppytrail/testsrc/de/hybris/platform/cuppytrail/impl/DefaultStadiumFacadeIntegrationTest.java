@@ -5,7 +5,7 @@ import de.hybris.platform.servicelayer.ServicelayerTransactionalTest;
 import de.hybris.platform.servicelayer.exceptions.UnknownIdentifierException;
 import de.hybris.platform.servicelayer.model.ModelService;
 import de.hybris.platform.cuppytrail.model.StadiumModel;
-import de.hybris.platform.cuppytrail.facades.impl.StadiumFacade;
+import de.hybris.platform.cuppytrail.facades.StadiumFacade;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -47,7 +47,7 @@ public class DefaultStadiumFacadeIntegrationTest extends ServicelayerTransaction
     @Test(expected = UnknownIdentifierException.class)
     public void testInvalidParameter()
     {
-        stadiumFacade.getStadium(STADIUM_NAME);
+        stadiumFacade.getStadium(STADIUM_NAME,"");
     }
 
     /**
@@ -56,7 +56,7 @@ public class DefaultStadiumFacadeIntegrationTest extends ServicelayerTransaction
     @Test(expected = IllegalArgumentException.class)
     public void testNullParameter()
     {
-        stadiumFacade.getStadium(null);
+        stadiumFacade.getStadium(null,"");
     }
 
 
@@ -66,18 +66,18 @@ public class DefaultStadiumFacadeIntegrationTest extends ServicelayerTransaction
     @Test
     public void testStadiumFacade()
     {
-        List<StadiumData> stadiumListData = stadiumFacade.getStadiums();
+        List<StadiumData> stadiumListData = stadiumFacade.getStadiums("");
         assertNotNull(stadiumListData);
         final int size = stadiumListData.size();
         modelService.save(stadiumModel);
 
-        stadiumListData = stadiumFacade.getStadiums();
+        stadiumListData = stadiumFacade.getStadiums("");
         assertNotNull(stadiumListData);
         assertEquals(size + 1, stadiumListData.size());
         assertEquals(STADIUM_NAME, stadiumListData.get(size).getName());
         assertEquals(STADIUM_CAPACITY.toString(), stadiumListData.get(size).getCapacity());
 
-        final StadiumData persistedStadiumData = stadiumFacade.getStadium(STADIUM_NAME);
+        final StadiumData persistedStadiumData = stadiumFacade.getStadium(STADIUM_NAME,"");
         assertNotNull(persistedStadiumData);
         assertEquals(STADIUM_NAME, persistedStadiumData.getName());
         assertEquals(STADIUM_CAPACITY.toString(), persistedStadiumData.getCapacity());

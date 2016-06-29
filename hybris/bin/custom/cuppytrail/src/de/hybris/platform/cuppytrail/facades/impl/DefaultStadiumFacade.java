@@ -5,7 +5,7 @@ import de.hybris.platform.cuppytrail.StadiumService;
 import de.hybris.platform.cuppytrail.data.MatchSummaryData;
 import de.hybris.platform.cuppytrail.data.StadiumData;
 import de.hybris.platform.cuppytrail.model.StadiumModel;
-import de.hybris.platform.cuppytrail.facades.impl.StadiumFacade;
+import de.hybris.platform.cuppytrail.facades.StadiumFacade;
 import org.springframework.beans.factory.annotation.Required;
 
 import java.text.DateFormat;
@@ -22,7 +22,7 @@ public class DefaultStadiumFacade implements StadiumFacade
     private StadiumService stadiumService;
 
     @Override
-    public List<StadiumData> getStadiums()
+    public List<StadiumData> getStadiums(final String format)
     {
         final List<StadiumModel> stadiumModels = stadiumService.getStadiums();
         final List<StadiumData> stadiumFacadeData = new ArrayList<StadiumData>();
@@ -37,7 +37,7 @@ public class DefaultStadiumFacade implements StadiumFacade
     }
 
     @Override
-    public StadiumData getStadium(final String name)
+    public StadiumData getStadium(final String name, final String format)
     {
         StadiumModel stadium = null;
         if (name != null)

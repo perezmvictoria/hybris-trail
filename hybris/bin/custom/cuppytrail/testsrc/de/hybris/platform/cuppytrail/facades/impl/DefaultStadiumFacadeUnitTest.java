@@ -2,7 +2,9 @@ package de.hybris.platform.cuppytrail.facades.impl;
 
 import de.hybris.platform.cuppytrail.StadiumService;
 import de.hybris.platform.cuppytrail.data.StadiumData;
+import de.hybris.platform.cuppytrail.facades.impl.DefaultStadiumFacade;
 import de.hybris.platform.cuppytrail.model.StadiumModel;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -108,7 +110,7 @@ public class DefaultStadiumFacadeUnitTest {
          * getStadiums, Mockito will return the stadiums instance to it. Mockito will also remember that the call was
          * made.
          */
-        final List<StadiumData> dto = stadiumFacade.getStadiums();
+        final List<StadiumData> dto = stadiumFacade.getStadiums("");
         // We now check that dto is a DTO version of stadiums..
         assertNotNull(dto);
         assertEquals(stadiums.size(), dto.size());
@@ -133,7 +135,7 @@ public class DefaultStadiumFacadeUnitTest {
          * We now make the call to StadiumFacade's getStadium. If within this method a call is made to StadiumService's
          * getStadium, Mockito will return the wembley instance to it. Mockito will also remember that the call was made.
          */
-        final StadiumData stadium = stadiumFacade.getStadium("wembley");
+        final StadiumData stadium = stadiumFacade.getStadium("wembley","");
         // We now check that stadium is a correct DTO representation of the ServiceModel wembley
         assertEquals(wembley.getCode(), stadium.getName());
         assertEquals(wembley.getCapacity().toString(), stadium.getCapacity());

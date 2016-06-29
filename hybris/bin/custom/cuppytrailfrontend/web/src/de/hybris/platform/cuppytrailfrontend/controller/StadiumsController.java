@@ -14,16 +14,19 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.annotation.Resource;
+
 
 @Controller
 public class StadiumsController
 {
-	private StadiumFacade stadiumFacade;
+	@Resource
+	private StadiumFacade defaultStadiumFacade;
 
 	@RequestMapping(value = "/stadiums")
 	public String showStadiums(final Model model)
 	{
-		final List<StadiumData> stadiums = stadiumFacade.getStadiums("stadiumListFormat");
+		final List<StadiumData> stadiums = defaultStadiumFacade.getStadiums("stadiumListFormat");
 		model.addAttribute("stadiums", stadiums);
 		return "StadiumListing";
 	}
@@ -32,15 +35,10 @@ public class StadiumsController
 	public String showStadiumDetails(@PathVariable String stadiumName, final Model model) throws UnsupportedEncodingException
 	{
 		stadiumName = URLDecoder.decode(stadiumName, "UTF-8");
-		final StadiumData stadium = stadiumFacade.getStadium(stadiumName, "stadiumDetailsFormat");
+		final StadiumData stadium = defaultStadiumFacade.getStadium(stadiumName, "stadiumDetailsFormat");
 		stadium.setName(stadium.getName());//StadiumsNameEncoded.getNameEncoded(stadium.getName()));
 		model.addAttribute("stadium", stadium);
 		return "StadiumDetails";
 	}
 
-	@Autowired
-	public void setFacade(final StadiumFacade facade)
-	{
-		this.stadiumFacade = facade;
-	}
 }
